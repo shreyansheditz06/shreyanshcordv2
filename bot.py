@@ -74,7 +74,7 @@ LTC = config.get("LTC_ADDY")
 Upi = config.get("Upi")
 upi_id = config.get("Upi")
 Qr = config.get("Qr")
-User _Id = config.get("User _Id")
+User_Id = config.get("User _Id")
 SERVER_Link = config.get("SERVER_Link")
 #===================================
 
