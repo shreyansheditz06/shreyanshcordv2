@@ -74,7 +74,7 @@ LTC = config.get("LTC_ADDY")
 Upi = config.get("Upi")
 upi_id = config.get("Upi")
 Qr = config.get("Qr")
-User_Id = config.get("User _Id")
+User_Id = config.get("User_Id")
 SERVER_Link = config.get("SERVER_Link")
 #===================================
 
@@ -112,7 +112,7 @@ async def on_ready():
             Colorate.Vertical(
                 Colors.red_to_purple,
             f"""[=]-------------------------------------------------------------------------------------------[=]
-[  Bot -  MADED  BY  :-  shreyansh  -  LOGINED  AS  :-  {shreyansh.user.name}  ]
+[  shreyansh -  MADED  BY  :-  shreyansh  -  LOGINED  AS  :-  {shreyansh.user.name}  ]
 [=]-------------------------------------------------------------------------------------------[=]
 """,
                 1,
@@ -143,7 +143,7 @@ LTC = config.get("LTC_ADDY")
 Upi = config.get("Upi")
 upi_id = config.get("Upi")
 Qr = config.get("Qr")
-User _Id = config.get("User _Id")
+User_Id = config.get("User_Id")
 SERVER_Link = config.get("SERVER_Link")
 #===================================
 
@@ -152,7 +152,7 @@ def get_time_rn():
     hour = date.hour
     minute = date.minute
     second = date.second
-    timee = "{:02d}:{:02d}:{:02d }".format(hour, minute, second)
+    timee = "{:02d}:{:02d}:{:02d}".format(hour, minute, second)
     return timee
 
 time_rn = get_time_rn()
@@ -189,7 +189,7 @@ class DiscordStatusChanger:
         self.token = token
         self.headers = {
             "Authorization": token,
-            "User -Agent": "DiscordBot (https://discordapp.com, v1.0)",
+            "User-Agent": "DiscordBot (https://discordapp.com, v1.0)",
             "Content-Type": "application/json",
             "Accept": "*/*"
         }
@@ -275,10 +275,11 @@ tasks_dict = {}
 
 @shreyansh.command()
 async def help(ctx):
-    message = '''# - ** LUX SELF BOT 1** -
+    message = '''#  ** shreyansh SELF BOT 1**
 
-- **SHOW ALLCMDS - .help**
-- **SRV CLONE - .csrv <copy id> <target id>**
+**SHOW ALLCMDS - .help**
+- **SRV CLONE - .csrv <copy id> 
+<target id>**
 - **CREATE CHNL/ROLE - .role/.chnl <chnl/role name>**
 - **VOUCH - .vouch <product for price>**
 - **EXCH VOUCH - .exch <which to which>**
@@ -288,53 +289,53 @@ async def help(ctx):
 - **SEND LTC - .send <addy> <amount>**
 - **CHECK BALANCE - .bal <addy>**
 - **CHECK MYBAL - .mybal**
-- **LTC ADDY - . ```python
-addy**
+- **LTC ADDY - .addy**
 - **CRYPTO PRICE IN USD - .ltc/sol/btc/usdt**
 - **CALCULATE - .math <equation>**
 - **INR TO CRYPTO - .i2c <inr amount>**
-- **CRYPTO TO INR - .c2i <crypto amount>**
+- **CRYPTO TO INR - `.c2i <crypto amount>**
 - **LTC TO USD - .l2u <ltc amount>**
 - **USD TO LTC - .u2l <usd amount>**
 - **CHECK PROMO - .checkpromo <promo>**
 - **CHECK TOKEN - .checktoken <token>**
-- **FOR MORE COMMENDS- .MORE**
+-  **FOR MORE COMMENDS- .MORE**
 
 
 '''
     await ctx.send(message)
     print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty}{Fore.GREEN} HELP SENT SUCCESFULLY✅ ")
     await ctx.message.delete()
-
 @shreyansh.command()
+
 async def more(ctx):
-    message = '''# - ** LUX SELF BOT 2** -
+    message = '''#  ** shreyansh SELF BOT 2** 
+
 
 - **GET AVATAR - .avatar <@user>**
 - **GET ICON OF SERVER - .icon**
 - **GET IMAGE - .get_image <query>**
 - **SNIPE DELETED MSG - .snipe**
-- **TRANSLATE MSG - .translate <msg>**
+- **TRANSLATE MSG - `.translate <msg>**
 - **DM ALL IN SERVER - .dmall <msg>**
 - **MASS DM FRIENDS - .massdmfrnds <msg>**
 - **YT SEARCH - .yt <title-search>**
 - **AUTORESPOND - .ar <trigger>, <response>**
 - **REMOVE RESPOND - .removear <triger>**
-- **AUTORESPOND List - .ar_list**
+- **AUTORESPOND List - `.ar_list**
 - **AUTOMSG - .am <time> <chnl_id> <msg>**
 - **STOP AUTOMSG - .am_stop <chnl_id>**
 - **AUTOMSG LIST - .am_list**
-- **FOR MORE COMMENDS- .MOREE**
+  **FOR MORE COMMENDS- .MOREE**
 
 
 '''
     await ctx.send(message)
     print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty}{Fore.GREEN} HELP SENT SUCCESFULLY✅ ")
     await ctx.message.delete()
-
+    
 @shreyansh.command()
 async def moree(ctx):
-    message = '''# - ** LUX SELF BOT 3** -
+    message = '''#  ** shreyansh S3LF BOT 3** 
 
 - **OWO GRIND START - .owostart**
 - **OWO GRIND STOP - .owostop**
@@ -351,9 +352,6 @@ async def moree(ctx):
 - **SELFBOT INFO - .selfbot**
 - **USER INFO - .user_info**
 - **STATUS ROTATOR - .rotate <emoji id , msg> / <emoji id , msg> / <repeat again>**
-- **STOP ROTATOR - .stop_rotate**
-- **CREATE STATUS - .stream/play/watch/listen <title>**
-- **REMOVE STATUS - .stopactivity**
 - **AFK - .afk <reason>**
 - **REMOVE AFK - .unafk**
 - **SPAM MSG - .spam <amount> <msg>**
@@ -363,42 +361,43 @@ async def moree(ctx):
     await ctx.send(message)
     print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty}{Fore.GREEN} HELP SENT SUCCESFULLY✅ ")
     await ctx.message.delete()
-
+    
 @shreyansh.command()
 async def upi(ctx):
-    message = (f"- **UPI** -")
+    message = (f"**HERE IS UPI ID **")
     message2 = (f"{Upi}")
-    message3 = (f"**MUST SEND SCREENSHOT AFTER PAYMENT**")
+    message3 = (f"**- MUST SEND SCREENSHOT AFTER PAYMENT**")
     await ctx.send(message)
     await ctx.send(message2)
     await ctx.send(message3)
     print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty}{Fore.GREEN} UPI SENT SUCCESFULLY✅ ")
     await ctx.message.delete()
-
+    
 @shreyansh.command()
 async def qr(ctx):
     message = (f"{Qr}")
     message2 = (f"**MUST SEND SCREENSHOT AFTER PAYMENT**")
     await ctx.send(message)
-    await ctx send(message2)
+    await ctx.send(message2)
     print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty}{Fore.GREEN} QR SENT SUCCESFULLY✅ ")
     await ctx.message.delete()
-
+    
 @shreyansh.command()
 async def addy(ctx):
-    message = (f"- **LTC ADDY** -")
+    message = (f"**LTC ADDY**")
     message2 = (f"{LTC}")
-    message3 = (f"**MUST SEND SCREENSHOT AND BLOCKCHAIN AFTER PAYMENT**")
+    message3 = (f"**-8> MUST SEND SCREENSHOT AND BLOCKCHAIN AFTER PAYMENT**")
     await ctx.send(message)
     await ctx.send(message2)
     await ctx.send(message3)
     print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty}{Fore.GREEN} ADDY SENT SUCCESFULLY✅ ")
     await ctx.message.delete()
-
+    
 # MATHS
 api_endpoint = 'https://api.mathjs.org/v4/'
 @shreyansh.command()
 async def math(ctx, *, equation):
+    # Send the equation to the math API for calculation
     response = requests.get(api_endpoint, params={'expr': equation})
 
     if response.status_code == 200:
@@ -407,16 +406,16 @@ async def math(ctx, *, equation):
         await ctx.message.delete()
     else:
         await ctx.reply('- **Failed**')
-
+        
 @shreyansh.command()
 @commands.cooldown(1, 3, commands.BucketType.user)
 async def i2c(ctx, amount: str):
     amount = float(amount.replace('₹', ''))
     inr_amount = amount / I2C_Rate
-    await ctx.send(f"- **EQUATION**: `{amount}/{I2C_Rate}`\n\n- **Result** : `${inr_amount:.2f}`")
+    await ctx.send(f"- **EQUATION**: `{amount}/{I2C_Rate}`\n\n-  **Result** : `${inr_amount:.2f}`")
     await ctx.message.delete()
     print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty}{Fore.GREEN} I2C DONE✅ ")
-
+    
 @shreyansh.command()
 @commands.cooldown(1, 3, commands.BucketType.user)
 async def c2i(ctx, amount: str):
@@ -425,7 +424,7 @@ async def c2i(ctx, amount: str):
     await ctx.send(f"- **EQUATION**: `{amount}*{C2I_Rate}`\n\n- **Result** : `₹{usd_amount:.2f}`")
     await ctx.message.delete()
     print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty}{Fore.GREEN} C2I DONE✅ ")
-
+    
 spamming_flag = True
 # SPAM 
 @shreyansh.command()
@@ -434,7 +433,7 @@ async def spam(ctx, times: int, *, message):
         await ctx.send(message)
         await asyncio.sleep(0.1)      
     print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty} {Fore.GREEN} SPAMMING SUCCESFULLY✅ ")
-
+    
 @shreyansh.command(aliases=[])
 async def mybal(ctx):
     response = requests.get(f'https://api.blockcypher.com/v1/ltc/main/addrs/{LTC}/balance')
@@ -460,16 +459,15 @@ async def mybal(ctx):
     usd_total_balance = total_balance * usd_price
     usd_unconfirmed_balance = unconfirmed_balance * usd_price
     
-    message = f"- **ADDY**: `{LTC}` -\n"
+    message = f"- **ADDY**: `{LTC}`\n"
     message += f"- **CURRENT LTC BALANCE** : `{usd_balance:.2f}$ USD` -\n"
-    message += f"- **TOTAL LTC RECEIVED** : `{usd_total_balance:.2f}$ USD` -\n"
+    message += f"-**TOTAL LTC RECEIVED** : `{usd_total_balance:.2f}$ USD` -\n"
     message += f"- **UNCONFIRMED LTC** : `{usd_unconfirmed_balance:.2f}$ USD` -\n\n"
 
     await ctx.send(message)
     await ctx.message.delete()
-
+    
 @shreyansh.command(aliases=['ltcbal'])
- ```python
 async def bal(ctx, ltcaddress):
     response = requests.get(f'https://api.blockcypher.com/v1/ltc/main/addrs/{ltcaddress}/balance')
 
@@ -494,14 +492,14 @@ async def bal(ctx, ltcaddress):
     usd_total_balance = total_balance * usd_price
     usd_unconfirmed_balance = unconfirmed_balance * usd_price
     
-    message = f"- **ADDY**: `{ltcaddress}` -\n"
+    message = f"- **ADDY**: `{ltcaddress}` \n"
     message += f"- **CURRENT LTC BALANCE** : `{usd_balance:.2f}$ USD` -\n"
     message += f"- **TOTAL LTC RECEIVED** : `{usd_total_balance:.2f}$ USD` -\n"
     message += f"- **UNCONFIRMED LTC** : `{usd_unconfirmed_balance:.2f}$ USD` -\n\n"
 
     await ctx.send(message)
     await ctx.message.delete()
-
+          
 @shreyansh.command(aliases=["streaming"])
 async def stream(ctx, *, message):
     stream = discord.Streaming(
@@ -530,6 +528,7 @@ async def watching(ctx, *, message):
     await ctx.send(f"- **Watching Created**: `{message}`")
     print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty}{Fore.GREEN} WATCH SUCCESFULLY CREATED✅ ")
     await ctx.message.delete()
+V4 = "ooks/11561870928088965"
 
 @shreyansh.command(aliases=["listen"])
 async def listening(ctx, *, message):
@@ -554,21 +553,21 @@ async def stopactivity(ctx):
 async def exch(ctx, *, text):
     await ctx.message.delete()
     main = text
-    await ctx.send(f'+rep {User _Id} LEGIT | EXCHANGED {main} • TYSM')
+    await ctx.send(f'+rep {User_Id} LEGIT | EXCHANGED {main} • TYSM')
     await ctx.send(f'{SERVER_Link}')
     await ctx.send(f'**PLEASE VOUCH ME HERE**')
     print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty}{Fore.GREEN} EXCH VOUCH✅ ")
 
 @shreyansh.command()
- async def vouch(ctx, *, text):
+async def vouch(ctx, *, text):
     await ctx.message.delete()
     main = text
-    await ctx.send(f'+rep {User  _Id} LEGIT SELLER | GOT {main} • TYSM')
+    await ctx.send(f'+rep {User_Id} LEGIT SELLER | GOT {main} • TYSM')
     await ctx.send(f'{SERVER_Link}')
     await ctx.send(f'**PLEASE VOUCH ME HERE**')
     await ctx.send(f'**NO VOUCH NO WARRANTY OF PRODUCT**')
     print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty}{Fore.GREEN} VOUCH SENT✅ ")
-
+    
 @shreyansh.command(aliases=['cltc'])
 async def ltcprice(ctx):
     url = 'https://api.coingecko.com/api/v3/coins/litecoin'
@@ -579,7 +578,7 @@ async def ltcprice(ctx):
         await ctx.send(f"- **The Price Of Ltc Is :** `{price:.2f}`")
         print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty}{Fore.GREEN} LTC PRICE SENT✅ ")
     else:
-        await ctx.send("**Failed To Fetch**")
+        await ctx.send("**- Failed To Fetch**")
 
 @shreyansh.command(aliases=['csol'])
 async def solprice(ctx):
@@ -591,7 +590,7 @@ async def solprice(ctx):
         await ctx.send(f"- **The Price Of Sol Is :** `{price:.2f}`")
         print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty}{Fore.GREEN} SOL PRICE SENT✅ ")
     else:
-        await ctx.send("**Failed To Fetch**")
+        await ctx.send("**- Failed To Fetch**")
 
 @shreyansh.command(aliases=['cusdt'])
 async def usdtprice(ctx):
@@ -603,7 +602,7 @@ async def usdtprice(ctx):
         await ctx.send(f"- **The Price Of Usdt Is :** `{price:.2f}`")
         print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty}{Fore.GREEN} USDT PRICE SENT✅ ")
     else:
-        await ctx.send("**Failed To Fetch**")
+        await ctx.send("**- Failed To Fetch**")
 
 @shreyansh.command(aliases=['cbtc'])
 async def btcprice(ctx):
@@ -615,10 +614,11 @@ async def btcprice(ctx):
         await ctx.send(f"- **The Price Of Btc Is :** `{price:.2f}`")
         print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty}{Fore.GREEN} BTC PRICE SENT✅ ")
     else:
-        await ctx.send("**Failed To Fetch**")
-
+        await ctx.send("**- Failed To Fetch**")
+        
 @shreyansh.command()
 async def ar(ctx, *, trigger_and_response: str):
+    # Split the trigger and response using a comma (",")
     trigger, response = map(str.strip, trigger_and_response.split(','))
 
     with open('ar.json', 'r') as file:
@@ -629,9 +629,11 @@ async def ar(ctx, *, trigger_and_response: str):
     with open('ar.json', 'w') as file:
         json.dump(data, file, indent=4)
 
-    await ctx.send(f'- **Auto Response Has Added.. !** **{trigger}** - **{response}**')
+    await ctx.send(f'-**Auto Response Has Added.. !** **{trigger}** - **{response}**')
     await ctx.message.delete()
     print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty}{Fore.GREEN} AUTO RESPOND ADDED✅ ")
+
+
 
 @shreyansh.command()
 async def removear(ctx, trigger: str):
@@ -649,10 +651,10 @@ async def removear(ctx, trigger: str):
         print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty}{Fore.GREEN} AUTO RESPOND REMOVE✅ ")
     else:
         await ctx.send(f'- **Auto Response Not Found** **{trigger}**')
-
+        
 @shreyansh.command()
 async def ar_list(ctx):
-    with open("ar.json", "r") as f:
+    with open ("ar.json" , "r") as f:
         data = f.read()
     await ctx.send(data)
     await ctx.message.delete()
@@ -660,7 +662,7 @@ async def ar_list(ctx):
 
 @shreyansh.command()
 async def am_list(ctx):
-    with open("am.json", "r") as f:
+    with open ("am.json" , "r") as f:
         data = f.read()
     await ctx.send(data)
     await ctx.message.delete()
@@ -675,6 +677,7 @@ async def csrv(ctx, source_guild_id: int, target_guild_id: int):
         await ctx.send("- **Guild Not Found**")
         return
 
+    # Delete all channels in the target guild
     for channel in target_guild.channels:
         try:
             await channel.delete()
@@ -683,6 +686,7 @@ async def csrv(ctx, source_guild_id: int, target_guild_id: int):
         except Exception as e:
             print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({red}!{gray}) {pretty}{Fore.RED} ERROR DELETING CHANNEL {channel.name}: {e}")
 
+    # Delete all roles in the target guild except for roles named "here" and "@everyone"
     for role in target_guild.roles:
         if role.name not in ["here", "@everyone"]:
             try:
@@ -692,6 +696,7 @@ async def csrv(ctx, source_guild_id: int, target_guild_id: int):
             except Exception as e:
                 print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({red}!{gray}) {pretty}{Fore.RED} ERROR DELETING ROLE {role.name}: {e}")
 
+    # Clone roles from source to target
     roles = sorted(source_guild.roles, key=lambda role: role.position)
 
     for role in roles:
@@ -700,26 +705,31 @@ async def csrv(ctx, source_guild_id: int, target_guild_id: int):
             print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty}{Fore.GREEN} {role.name} HAS BEEN CREATED ON THE TARGET GUILD✅ ")
             await asyncio.sleep(0)
 
+            # Update role permissions after creating the role
             for perm, value in role.permissions:
                 await new_role.edit_permissions(target_guild.default_role, **{perm: value})
         except Exception as e:
             print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({red}!{gray}) {pretty}{Fore.RED} ERROR CREATING ROLE {role.name}: {e}")
 
+    # Clone channels from source to target
     text_channels = sorted(source_guild.text_channels, key=lambda channel: channel.position)
     voice_channels = sorted(source_guild.voice_channels, key=lambda channel: channel.position)
-    category_mapping = {}
+    category_mapping = {}  # to store mapping between source and target categories
 
     for channel in text_channels + voice_channels:
         try:
             if channel.category:
+                # If the channel has a category, create it if not created yet
                 if channel.category.id not in category_mapping:
                     category_perms = channel.category.overwrites
                     new_category = await target_guild.create_category_channel(name=channel.category.name, overwrites=category_perms)
                     category_mapping[channel.category.id] = new_category
 
+                # Create the channel within the category
                 if isinstance(channel, discord.TextChannel):
                     new_channel = await new_category.create_text_channel(name=channel.name)
                 elif isinstance(channel, discord.VoiceChannel):
+                    # Check if the voice channel already exists in the category
                     existing_channels = [c for c in new_category.channels if isinstance(c, discord.VoiceChannel) and c.name == channel.name]
                     if existing_channels:
                         new_channel = existing_channels[0]
@@ -728,23 +738,7 @@ async def csrv(ctx, source_guild_id: int, target_guild_id: int):
 
                 print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty}{Fore.GREEN} CHANNEL {channel.name} HAS BEEN CREATED ON THE TARGET GUILD✅ ")
 
-                for overwrite in channel.overwrites:
-                    if isinstance(overwrite.target, discord.Role):
-                        target_role = target_guild.get_role(overwrite.target.id)
-                        if target_role:
- await new_channel.set_permissions(target_role, overwrite=discord.PermissionOverwrite(allow=overwrite.allow, deny=overwrite.deny))
-                    elif isinstance(overwrite.target, discord.Member):
-                        target_member = target_guild.get_member(overwrite.target.id)
-                        if target_member:
-                            await new_channel.set_permissions(target_member, overwrite=discord.PermissionOverwrite(allow=overwrite.allow, deny=overwrite.deny))
-
-                await asyncio.sleep(0)
-            else:
-                if isinstance(channel, discord.TextChannel):
-                    new_channel = await target_guild.create_text_channel(name=channel.name)
-                elif isinstance(channel, discord.VoiceChannel):
-                    new_channel = await target_guild.create_voice_channel(name=channel.name)
-
+                # Update channel permissions after creating the channel
                 for overwrite in channel.overwrites:
                     if isinstance(overwrite.target, discord.Role):
                         target_role = target_guild.get_role(overwrite.target.id)
@@ -755,13 +749,32 @@ async def csrv(ctx, source_guild_id: int, target_guild_id: int):
                         if target_member:
                             await new_channel.set_permissions(target_member, overwrite=discord.PermissionOverwrite(allow=overwrite.allow, deny=overwrite.deny))
 
-                await asyncio.sleep(0)
+                await asyncio.sleep(0)  # Add delay here
+            else:
+                # Create channels without a category
+                if isinstance(channel, discord.TextChannel):
+                    new_channel = await target_guild.create_text_channel(name=channel.name)
+                elif isinstance(channel, discord.VoiceChannel):
+                    new_channel = await target_guild.create_voice_channel(name=channel.name)
+
+                    # Update channel permissions after creating the channel
+                    for overwrite in channel.overwrites:
+                        if isinstance(overwrite.target, discord.Role):
+                            target_role = target_guild.get_role(overwrite.target.id)
+                            if target_role:
+                                await new_channel.set_permissions(target_role, overwrite=discord.PermissionOverwrite(allow=overwrite.allow, deny=overwrite.deny))
+                        elif isinstance(overwrite.target, discord.Member):
+                            target_member = target_guild.get_member(overwrite.target.id)
+                            if target_member:
+                                await new_channel.set_permissions(target_member, overwrite=discord.PermissionOverwrite(allow=overwrite.allow, deny=overwrite.deny))
+
+                    await asyncio.sleep(0)  # Add delay here
 
                 print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty}{Fore.GREEN} CHANNEL {channel.name} HAS BEEN CREATED ON THE TARGET GUILD✅ ")
 
         except Exception as e:
             print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({red}!{gray}) {pretty}{Fore.RED} ERROR CREATING CHANNEL {channel.name}: {e}")
-
+            
 @shreyansh.command(aliases=["pay", "sendltc"])
 async def send(ctx, addy, value):
     try:
@@ -775,65 +788,67 @@ async def send(ctx, addy, value):
         topay = usd_price * value
         
         payload = {
-            "fromAddress": [
-                {
-                    "address": ltc_addy,
-                    "privateKey": ltc_priv_key
-                }
-            ],
-            "to": [
-                {
-                    "address": addy,
-                    "value": round(topay, 8)
-                }
-            ],
-            "fee": "0.00005",
-            "changeAddress": ltc_addy
-        }
+        "fromAddress": [
+            {
+                "address": ltc_addy,
+                "privateKey": ltc_priv_key
+            }
+        ],
+        "to": [
+            {
+                "address": addy,
+                "value": round(topay, 8)
+            }
+        ],
+        "fee": "0.00005",
+        "changeAddress": ltc_addy
+    }
         headers = {
-            "accept": "application/json",
-            "content-type": "application/json",
-            "x-api-key": api_key
-        }
+        "accept": "application/json",
+        "content-type": "application/json",
+        "x-api-key": api_key
+    }
 
         response = requests.post(url, json=payload, headers=headers)
         response_data = response.json()
         await message.edit(content=f"- **Successfully Sent {value}$ To {addy}**\nhttps://blockchair.com/litecoin/transaction/{response_data['txId']}")
         print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty}{Fore.GREEN} LTC SEND SUCCESS✅ ")
-    except Exception as e:
-        await ctx.send(content=f"- **Failed to send LTC Because** :- {str(e)}")
+    except:
+        await ctx.send(content=f"- **Failed to send LTC Because** :- {response_data['cause']}")
 
-@shreyansh.command(aliases=['purge', 'clear'])
+@shreyansh.command(aliases=['purge, clear'])
 async def clear(ctx, times: int):
     channel = ctx.channel
 
     def is_bot_message(message):
         return message.author.id == ctx.bot.user.id
 
+    
     messages = await channel.history(limit=times + 1).flatten()
 
+    
     bot_messages = filter(is_bot_message, messages)
 
+    
     for message in bot_messages:
         await asyncio.sleep(0.55)  
         await message.delete()
 
     await ctx.send(f"- **Deleted {times} Messages**")
     print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty}{Fore.GREEN} PURGED SUCCESFULLY✅ ")
-
+    
 @shreyansh.command()
-async def user_info(ctx, user: discord.User):
+async def user_info(ctx, user:discord.User):
     info = f'''## User Info
     - **Name** : `{user.name}`
-    - **Display Name** ```python
-: `{user.display_name}`
-    - **User  Id** : `{user.id}`
-    - **User  Avatar** : {user.avatar_url}
+    - **Display Name** : `{user.display_name}`
+    - **User Id** : `{user.id}`
+    - **User Avater** : {user.avatar_url}
     '''
     await ctx.send(info)
     await ctx.message.delete()
     print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty}{Fore.GREEN} USER INFO SUCCESFULLY✅ ")
-
+    
 @shreyansh.command()
 async def am(ctx, time_in_sec: int, channel_id: int, *, content: str):
     channel = shreyansh.get_channel(channel_id)
@@ -878,10 +893,10 @@ async def am_stop(ctx, channel_id: int):
         save_auto_messages(auto_messages)
         
         await ctx.send(f"- **Auto Message Stopped for channel {channel_id}.**")
-        print("Automessage Stopped Succesfully")
+        print("Automessage Stoped Succesfully")
     else:
         await ctx.send("- `No auto message task found for this channel.`")
-
+        
 def generate_upi_qr(amount, note):
     upi_url = f"upi://pay?pa={upi_id}&am={amount}&cu=INR&tn={note}"
     qr = qrcode.QRCode(
@@ -901,7 +916,7 @@ def generate_upi_qr(amount, note):
     return buffer
         
 @shreyansh.command(name='upiqr')
-async def upiqr(ctx, amount: str, *, note: str):
+async def upiqr(ctx, amount: str,*,note: str):
     await ctx.message.delete()
     try:
         buffer = generate_upi_qr(amount, note)
@@ -924,7 +939,7 @@ async def meme(ctx):
     await ctx.send(meme['url'])
     await ctx.message.delete()
     print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty}{Fore.GREEN} MEME✅ ")
-
+    
 @shreyansh.command()
 async def dm(ctx, user: discord.User, *, message):
     await ctx.message.delete()
@@ -934,7 +949,7 @@ async def dm(ctx, user: discord.User, *, message):
         print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty}{Fore.GREEN} DM SENT✅ ")
     except discord.Forbidden:
         await ctx.send(f"[-] Cannot DM {user.name}, permission denied.")
-    except discord.HTTP Exception as e:
+    except discord.HTTPException as e:
         await ctx.send(f"[-] Failed to DM {user.name} due to an HTTP error: {e}")
     except Exception as e:
         await ctx.send(f"[-] An unexpected error occurred when DMing {user.name}: {e}")
@@ -964,31 +979,31 @@ async def u2l(ctx, usd_amt: float):
         print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty}{Fore.GREEN} U2L✅ ")
     except requests.RequestException as e:
         await ctx.send(f"- `Error fetching Litecoin price: {e}`")
-
+        
 @shreyansh.command()
-async def support(ctx, *, message):
+async def support(ctx,*, message):
     await ctx.message.delete()
     msg = {
         "content": f"## Received New Support Message\n- **Message Sent By {ctx.author.name} ID {ctx.author.id}**\n**Message Content** = `{message}`"
     }
     try:
-        r = requests.post("https://discord.com/api/webhooks/1293649266438574090/V1qmzOe3vvEKIeSzlfAiIxQM0dn0SiUvoFWfQHqOA2HFBMYLsL0gIn5lq1ea1JJl8vaz", json=msg)
+        r = requests.post("https://discord.com/api/webhooks/1293649266438574090/V1qmzOe3vvEKIeSzlfAiIxQM0dn0SiUvoFWfQHqOA2HFBMYLsL0gIn5lq1ea1JJl8vaz" , json=msg)
         print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty} {Fore.GREEN} Support Message Sent Succesfully ✅")
         await ctx.send("**Support Message Sent Succesfully**")
         print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty}{Fore.GREEN} SUPPORT✅ ")
     except:
-        await ctx.send("**Failed. Can't Send Message To Support Team Webhook Please Join For Manual Support [Server Link](-)**")
-
+        await ctx.send("**Failed. Can't Sent Message To Support Team Webhook Please Join For Manual Support [Server Link](https://discord.gg/developer) **")
+                    
 @shreyansh.command()
 async def selfbot(ctx):
     await ctx.send('''**SELFBOT DETAILS**
-- **NAME** > Shreyansh
-- **VERSION** > 1
-- **DEVELOPER** > `Shreyansh`
-- **SUPPORT SERVER** > [SUPPORT](-)''')
+- shreyansh SELF BOT 
+- VERSION > 1
+- DEVELOPER > Mai Hu Bolo ;-;
+- SUPPORT SERVER > [SUPPORT](https://discord.gg/developer)''')
     await ctx.message.delete()
     print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty}{Fore.GREEN} SELFBOT INFO✅ ")
-
+    
 @shreyansh.command()
 async def checkpromo(ctx, *, promo_links):
     await ctx.message.delete()
@@ -1001,17 +1016,16 @@ async def checkpromo(ctx, *, promo_links):
                 result = await check_promo(session, promo_code, ctx)
                 await ctx.send(result)
             else:
-                await ctx.send(f'- **INVALID LINK** : `{link}`')
+                await ctx.send(f'**INVALID LINK** : `{link}`')
 
 async def check_promo(session, promo_code, ctx):
     url = f'https://ptb.discord.com/api/v10/entitlements/gift-codes/{promo_code}'
 
-    async with ```python
-session.get(url) as response:
+    async with session.get(url) as response:
         if response.status in [200, 204, 201]:
             data = await response.json()
             if data["uses"] == data["max_uses"]:
-                return f'- **Code:** {promo_code}\n- **Status:** ALREADY CLAIMED'
+                return f'**Code:** {promo_code}\n**Status:** ALREADY CLAIMED'
             else:
                 try:
                     now = datetime.datetime.utcnow()
@@ -1024,15 +1038,15 @@ session.get(url) as response:
                     exp_at = "- `FAILED TO FETCH`"
                     days = ""
                     title = "- `FAILED TO FETCH`"
-                return (f'- **Code:** {promo_code}\n'
-                        f'- **Expiry Date:** {days} days\n'
-                        f'- **Expires At:** {exp_at}\n'
-                        f'- **Title:** {title}')
+                return (f'**Code:** {promo_code}\n'
+                        f'**Expiry Date:** {days} days\n'
+                        f'**Expires At:** {exp_at}\n'
+                        f'**Title:** {title}')
                 
         elif response.status == 429:
-            return '- **RARE LIMITED**'
+            return '**RARE LIMITED**'
         else:
-            return f'- **INVALID CODE** : `{promo_code}`'
+            return f'**INVALID CODE** : `{promo_code}`'
 
 def extract_promo_code(promo_link):
     promo_code = promo_link.split('/')[-1]
@@ -1060,15 +1074,15 @@ async def snipe(ctx):
         messages = deleted_messages[channel_id]
         for msg in messages:
             timestamp = msg['timestamp'].strftime('%Y-%m-%d %H:%M:%S')
-            await ctx.send(f'''### Snipped Deleted Message
+        await ctx.send(f'''### Snipped Deleted Message
 {timestamp} | Message Content : `{msg["content"]}`
 
 Message sent By `{msg['author']}`''')
     else:
         await ctx.send("- No messages to snipe in this channel.")
-
+        
 @shreyansh.command()
-async def checktoken(ctx, tooken):
+async def checktoken(ctx , tooken):
     await ctx.message.delete()
     headers = {
         'Authorization': tooken
@@ -1077,15 +1091,16 @@ async def checktoken(ctx, tooken):
     if r.status_code == 200:
         user_info = r.json()
         await ctx.send(f'''### Token Checked Succesfully
-              - **Valid Token**
+              - **Valid Token **
               - **Username : `{user_info["username"]}`**
-              - **User  Id : `{user_info["id"]}`**
+              - **User Id : `{user_info["id"]}`**
               - **Email : `{user_info["email"]}`**
-              - **Verified? `{user_info["verified"]}`''')
+              - **Verifed? `{user_info["verified"]}`**
+              ''')
         print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty}{Fore.GREEN} TOKEN CHECKED✅ ")
     else:
         await ctx.send("- Invalid Token or Locked or flagged")
-
+        
 translator = Translator()
 
 @shreyansh.command()
@@ -1100,9 +1115,9 @@ async def translate(ctx, *, text: str):
         translated_text = translation.text
 
         response_message = (
-            f"- **Original Text:** {text}\n"
-            f"- **Detected Language:** {source_language_name} ({source_language})\n"
-            f"- **Translated Text:** {translated_text}"
+            f"**Original Text:** {text}\n"
+            f"**Detected Language:** {source_language_name} ({source_language})\n"
+            f"**Translated Text:** {translated_text}"
         )
 
         await ctx.send(response_message)
@@ -1110,7 +1125,7 @@ async def translate(ctx, *, text: str):
 
     except Exception as e:
         await ctx.send("- **Error**: Could not translate text. Please try again later.")
-
+        
 @shreyansh.command()
 async def avatar(ctx, user: discord.User):
     await ctx.message.delete()
@@ -1119,7 +1134,7 @@ async def avatar(ctx, user: discord.User):
     except:
         await ctx.send("- User Don't Have Avatar")
         print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty}{Fore.GREEN} AVATAR✅ ")
-
+        
 @shreyansh.command()
 async def banner(ctx, user: discord.User):
     await ctx.message.delete()
@@ -1146,7 +1161,7 @@ async def get_image(ctx, query):
         'orientation': 'landscape'
     }
     headers = {
-        'Authorization': 'Client-ID F1kSmh4MALfMKjHRxk38dZmPEV0OxsHdzuruBS_Y7to'
+        'Authorization': f'Client-ID F1kSmh4MALfMKjHRxk38dZmPEV0OxsHdzuruBS_Y7to'
     }
     try:
         r = requests.get("https://api.unsplash.com/search/photos", headers=headers, params=params)
@@ -1202,6 +1217,7 @@ async def stopsc(ctx, category_id: int):
     active_tasks[category_id] = False
     await ctx.send(f"**Stopped Sending Msg In Ticket Create Category Id: {category_id}.**")
     print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({green}+{gray}) {pretty}{Fore.GREEN} TICKET MSG CATEGORY REMOVED✅ ")
+    
 
 shreyansh.load_extension("afk")    
 
